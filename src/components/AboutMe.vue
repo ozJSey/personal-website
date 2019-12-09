@@ -5,32 +5,134 @@
                 <div class="col-12 me-card">
                     <div class="personal-information">
                         <p>Özgür Seyidoğlu</p>
-                        <p>Mid-Level Front-End &amp; Mobile Developer</p>
+                        <p>Front-End &amp; Mobile Developer</p>
                     </div>
                     <div class="row tech-stack">
                         <div class="col-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons html" :icon="[ 'fab', 'html5' ]" />
                             </div>
+                            <div class="backcard">
+                                <ul>
+                                    <li>
+                                        UI/UX
+                                    </li>
+                                    <li>
+                                        Responsive
+                                    </li>
+                                    <li>
+                                        Structured
+                                    </li>
+                                    <li>
+                                        HTML5 New Elements
+                                    </li>
+                                    <li>
+                                        SEO Principles
+                                    </li>
+                                    <li>
+                                        Any Design To Live
+                                    </li>
+                                    <li>
+                                        Custom grids
+                                    </li>
+                                    <li>
+                                        Canvas
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons css" :icon="[ 'fab', 'css3' ]" />
+                            </div>
+                            <div class="backcard">
+                                <ul>
+                                    <li>
+                                        UI/UX
+                                    </li>
+                                    <li>
+                                        Responsive
+                                    </li>
+                                    <li>
+                                        Preprocessors
+                                    </li>
+                                    <li>
+                                        Animations
+                                    </li>
+                                    <li>
+                                        SMACSS
+                                    </li>
+                                    <li>
+                                        Flexbox
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons js" :icon="[ 'fab', 'js' ]" />
                             </div>
+                             <div class="backcard">
+                                <ul>
+                                    <li>
+                                        Vanilla JS
+                                    </li>
+                                    <li>
+                                        ES6+
+                                    </li>
+                                    <li>
+                                        Semantic
+                                    </li>
+                                    <li>
+                                        Animations
+                                    </li>
+                                    <li>
+                                        No Libraries if no need
+                                    </li>
+                                    <li>
+                                        Performance &amp; Reusability
+                                    </li>
+                                </ul>
+                            </div>
+                            
                         </div>
                         <div class="col-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons vue" :icon="[ 'fab', 'vuejs' ]" />
                             </div>
+                            <div class="backcard">
+                                <ul>
+                                    <li>
+                                        Absolutely Love Vue!
+                                    </li>
+                                    <li>
+                                        Template &amp; CLI
+                                    </li>
+                                    <li>
+                                        Atomic components
+                                    </li>
+                                    <li>
+                                        Router
+                                    </li>
+                                    <li>
+                                        Vuex
+                                    </li>
+                                    <li>
+                                        Nuxt
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons gulp" :icon="[ 'fab', 'gulp' ]" />
+                            </div>
+                            <div class="backcard">
+                                <ul>
+                                    <li>
+                                        Prefered Task Runner
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                         <div class="col-3">
@@ -42,6 +144,7 @@
                                             d="M237.248 18.752c12.04 12.04 18.291 27.122 18.748 45.247V192c-.457 18.12-6.707 33.207-18.748 45.247-12.04 12.04-27.127 18.291-45.251 18.752H63.999c-18.125-.46-33.207-6.711-45.247-18.752C6.712 225.208.46 210.121 0 192.001V64c.46-18.125 6.711-33.207 18.752-45.247C30.792 6.712 45.874.46 63.999 0h127.998c18.124.46 33.211 6.711 45.251 18.752zm-17.655 103c-4.023-4.002-6.114-9.024-6.28-15.066V64c-.128-6.042-2.202-11.072-6.221-15.091-4.02-4.023-9.054-6.093-15.095-6.22h-21.312v106.626L85.315 42.687H63.999c-6.042.128-11.072 2.198-15.091 6.221-4.023 4.02-6.093 9.05-6.22 15.09v42.688c-.167 6.042-2.258 11.064-6.281 15.066-4.02 3.997-9.05 6.08-15.091 6.246 6.041.17 11.072 2.253 15.09 6.25 4.024 4.002 6.115 9.024 6.281 15.066V192c.128 6.037 2.198 11.072 6.221 15.091 4.02 4.02 9.05 6.093 15.09 6.22h21.317V106.687l85.37 106.627h21.312c6.041-.128 11.076-2.202 15.095-6.221 4.02-4.02 6.093-9.054 6.22-15.09v-42.688c.167-6.042 2.258-11.064 6.281-15.066 4.02-3.997 9.05-6.08 15.091-6.25-6.041-.167-11.072-2.249-15.09-6.246z"
                                             fill="#3C5AFD" /></svg>
                                 </div>
+                            
                             </div>
                         </div>
                         <div class="col-3">
@@ -61,11 +164,12 @@
                                     </svg>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="col-3">
                             <div class="spinner-card">
                                 <div class="icons-not-fa">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="30%"
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="21%"
                                         viewBox="2.146 180.818 494.707 139.364">
                                         <path
                                             d="M143.491 235.256l.001-.006-3.953 14.007 3.952-14.001zM163.818 265.664l-4.355-.025 4.355.025zM162.698 286.583h.004l-26.093.095 26.089-.095zM168.169 265.689l-4.357-.025 4.357.025zM164.985 284.805l4.545-17.334-4.545 17.338v-.004zM261.055 204.977l-8.466 39.804 8.466-39.804zM239.29 204.977l-6.428 29.735 6.428-29.738v.003z"
@@ -98,13 +202,17 @@
                 </div>
             </div>
         </div>
+        <AboutDesc/>
     </section>
 </template>
 
 <script>
     import '@fortawesome/vue-fontawesome';
+    import AboutDesc from './AboutDesc';
     export default {
-
+        components:{
+            AboutDesc
+        }
     }
 </script>
 
@@ -123,6 +231,7 @@
             justify-content: center;
             align-items: center;
             width: 100%;
+            padding: 15px 0;
 
             &:first-child{
                 border-left: 0px;
@@ -133,10 +242,15 @@
                 border-left: 0px;
                 border-top: 0px;
             }
-            &:hover{
-                 &:nth-child(n)::after{
+            &:hover:nth-child(-n+4){
+                &:nth-child(n)::after{
                     animation: panel 1.5s linear .3s 1 normal forwards;
-                   
+                }
+                .spinner-card{
+                    animation: spinner .4s ease-in 1.4s 1 normal forwards;
+                }
+                .backcard{
+                    animation: spinner .4s ease-in 1.8s 1 reverse forwards;
                 }
             }
              &:nth-child(n)::after{
@@ -155,6 +269,14 @@
                 border-right: 0px;
                 
             }
+        }
+    }
+    @keyframes spinner {
+        from{
+            transform: perspective(1000px) rotateY(0);
+        }
+        to{
+            transform: perspective(1000px) rotateY(90deg);
         }
     }
     @keyframes panel {
@@ -178,16 +300,51 @@
         }
     }
     .spinner-card {
-       
-        
+        position: relative;
         padding: 0;
         margin: 20px 0;
+        transition: all .7s ease-in;
         
         >svg {
             padding: 15px;
         }
+       
     }
-
+     .backcard{
+            position: absolute;
+             transition: all .7s ease-out;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: perspective(100px) rotateY(90deg);
+        ul{
+            padding-inline-start: 0;
+            padding: 0 30px;
+        }
+            li{
+                position: relative;
+                cursor: default;
+                &::after{
+                    content: '';
+                    transition: all .7s ease-out;
+                    position: absolute;
+                    right: -10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 6px;
+                    background-color: white;
+                }
+                &:hover{
+                    &::after{
+                    right: calc(100% + 12px);
+                    box-shadow: 0 -1px 2px 2px white;
+                    }
+                }
+            }
+        }
     .icons {
 
         font-size: 150px;
@@ -245,10 +402,11 @@
 
     .me-card {
         text-align: center;
-        border-radius: 5px;
+        border-radius: 15px;
         background-color: #111;
+        box-shadow: 2px 2px 17px 10px rgba(0,0,0,0.96);
         color: #f0f0f0;
-        margin-top: 50px;
+        margin:50px 0;
 
 
         p {

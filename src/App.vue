@@ -2,18 +2,21 @@
   <div id="app">
     <Banner/>
     <AboutMe/>
+    <Fun/>
   </div>
 </template>
 
 <script>
 import Banner from './components/Banner.vue';
 import AboutMe from './components/AboutMe.vue';
+import Fun from './components/Fun.vue';
 
 export default {
   name: 'app',
   components: {
     Banner,
-    AboutMe
+    AboutMe,
+    Fun
   },
  
 }

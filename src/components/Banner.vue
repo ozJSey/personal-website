@@ -15,19 +15,18 @@
       <p class="desc">Website <span> Artistry </span></p>
       <p class="trans-desc">Welcome to my website!</p>
       </div>
-     
     </div>
-     <div ref="menu" class="menu">
+    
+    </div>
+    <div ref="menu" class="menu">
       <ul>
         <li><a href="#">About me</a></li>
-        <li><a href="#">Accreditations</a></li>
+        <li><a href="#">Skills?</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">CV</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
-    </div>
-   
   </div>
   </section>
 </template>
@@ -65,25 +64,29 @@
         childArray.push(e.target.nextElementSibling.nextElementSibling.nextElementSibling);
         
         if(this.active == false){
-          this.$refs.menu.style.left = "0";
-          this.$refs.banner.style.borderTopLeftRadius = "50% 110%";
-          childArray[0].style.transform = "rotateZ(45deg) translate3d(0, 8px, 0)";
+          this.$refs.menu.style.top = "0";
+          
+          this.$refs.banner.style.transform = "perspective(200px) rotateX(10deg)";
+          childArray[0].style.transform = "rotateZ(-10deg) translate3d(0, 8px, 0)";
           childArray[0].style.width = "50px";
           childArray[0].style.borderRadius = "100%";
-          childArray[1].style.transform = "rotateZ(0deg) translate3d(10px , 31px , 0)";
+          childArray[1].style.transform = "rotateZ(-33deg) translate3d(10px, 31px, 0px)";
           childArray[1].style.width = "25px";
-          childArray[2].style.transform = "rotateZ(-90deg) translate3d(0, 23px, 0)";
+          childArray[2].style.transform = "rotateZ(-163deg) translate3d(-20px, 16px, -40px)";
           childArray[2].style.width = "25px";
           this.active = true;
 
           setTimeout(() => {
-            this.$refs.menu.style.borderTopRightRadius = "25% 150%";
-          }, 1000);
+            this.$refs.menu.style.borderTopRightRadius = "200% 10% ";
+            this.$refs.menu.style.transform = "perspective(400px) rotateY(-10deg)";
+          }, 300);
         }
         else{
-           this.$refs.menu.style.left = "-300px";
+           this.$refs.menu.style.top = "-150px";
            this.$refs.banner.style.borderTopLeftRadius = "0%";
            this.$refs.menu.style.borderTopRightRadius = "0%";
+           this.$refs.menu.style.transform = "perspective(400px) rotateY(0)";
+            this.$refs.banner.style.transform = "perspective(200px) rotateX(0deg)";
            childArray.forEach(el => {
              el.style.transform = "rotateZ(0) translate3d(0,0,0)";
              el.style.width = "50px";
@@ -112,7 +115,7 @@
 <style scoped lang="scss">
   .bottom-text {
     position: absolute;
-    bottom: -350px;
+    bottom: -250px;
     display: flex;
     left: 0;
     transform: translateY(-50%);
@@ -157,21 +160,21 @@
   }
   .menu{
     position : absolute;
-    left: -300px;
+    right: 0;
     transition: all ease-in-out .8s;
     background-color: #e9d54d;
     z-index: -1;
-    width: 288px;
     color: white;
-    height: 80%;
-    top: 190px;
-box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
+    top: -190px;
+    width: 50%;
+    box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
     ul{
-      width: 50%;
-      list-style: none;
+      width: 100%;
+      list-style: none !important;
       padding-left:20px;
+      display: flex;
       li{
-        margin: 10px 0;
+        margin: 10px 20px;
         font-size: 24px;
         position: relative;
         a{
@@ -237,6 +240,7 @@ box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
     top: 100px;
     left: 50px;
     display: flex;
+    z-index: 3;
 
     .hamburger-btn {
       outline: none;
@@ -280,7 +284,7 @@ box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
     color: #222;
     font-weight: 600;
     border-radius: 5px;
-    font-size: 120px;
+    font-size: 90px;
     box-shadow: 0px 0px 1px 4px rgba(233, 213, 77, .2);
   }
 
@@ -293,16 +297,17 @@ box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
   .glitch-wrapper {
     height: 100%;
     display: flex;
-    transition: border-top-left-radius .3s ease-in;
+    transition: all .7s ease-out;
      background: #111;
     justify-content: center;
     z-index: 1;
     align-items: center;
+    box-shadow: 2px -7px 17px 10px rgba(0,0,0,0.96);
   }
 
   .glitch {
     color: white;
-    font-size: 120px;
+    font-size: 90px;
     text-transform: upercase;
     position: relative;
     display: inline-block;

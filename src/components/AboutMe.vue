@@ -24,13 +24,7 @@
                                         Structured
                                     </li>
                                     <li>
-                                        HTML5 New Elements
-                                    </li>
-                                    <li>
                                         SEO Principles
-                                    </li>
-                                    <li>
-                                        Any Design To Live
                                     </li>
                                     <li>
                                         Custom grids
@@ -330,8 +324,8 @@
                     transition: all .7s ease-out;
                     position: absolute;
                     right: -10px;
-                    top: 50%;
-                    transform: translateY(-50%);
+                    font-size: 16px;
+                    top: 9px;
                     width: 6px;
                     height: 6px;
                     border-radius: 6px;
@@ -339,8 +333,9 @@
                 }
                 &:hover{
                     &::after{
-                    right: calc(100% + 12px);
+                    right: calc(100% + 6px);
                     box-shadow: 0 -1px 2px 2px white;
+                    width: 25px;
                     }
                 }
             }
@@ -388,7 +383,7 @@
 
     #secondSection {
         font-family: 'Arima Madurai', cursive;
-
+        position: relative;
         background-size: 40%;
         background-position: 7%;
         background-repeat: no-repeat;

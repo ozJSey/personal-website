@@ -57,7 +57,6 @@
     },
     methods:{
       show(e){
-        console.log(e.target.children);
         let childArray = [];
         childArray.push(e.target.nextElementSibling);
         childArray.push(e.target.nextElementSibling.nextElementSibling);

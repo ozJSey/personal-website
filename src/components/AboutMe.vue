@@ -8,7 +8,7 @@
                         <p>Front-End &amp; Mobile Developer</p>
                     </div>
                     <div class="row tech-stack">
-                        <div class="col-3">
+                        <div class="col-3" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{ active: hover1 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons html" :icon="[ 'fab', 'html5' ]" />
                             </div>
@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{ active: hover2 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons css" :icon="[ 'fab', 'css3' ]" />
                             </div>
@@ -62,7 +62,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{ active: hover3 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons js" :icon="[ 'fab', 'js' ]" />
                             </div>
@@ -90,7 +90,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-3">
+                        <div class="col-3" @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{ active: hover4 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons vue" :icon="[ 'fab', 'vuejs' ]" />
                             </div>
@@ -204,9 +204,17 @@
     import '@fortawesome/vue-fontawesome';
     import AboutDesc from './AboutDesc';
     export default {
+        data() {
+            return {
+                hover1: false,
+                hover2: false,
+                hover3: false,
+                hover4: false,
+            };
+        },
         components:{
             AboutDesc
-        }
+        },
     }
 </script>
 
@@ -236,7 +244,7 @@
                 border-left: 0px;
                 border-top: 0px;
             }
-            &:hover:nth-child(-n+4){
+            &.active:nth-child(-n+4){
                 &:nth-child(n)::after{
                     animation: panel 1.5s linear .3s 1 normal forwards;
                 }
@@ -248,10 +256,12 @@
                 }
             }
              &:nth-child(n)::after{
-                content: '';
+                content: 'Keep Hovering (:';
                 position: absolute;
+                color: transparent;
                 right: 20px;
                 left: 50%;
+                line-height: 2;
                 transform: translateX(-50%);
                 width: 0;
                 transition: width .4s ease-in;
@@ -285,6 +295,10 @@
         }
         15%{
             width: 90%; box-shadow: 0px 0px 19px 12px rgba(233, 213, 77, 0.8),inset 0px 0px 19px 12px rgba(233, 213, 77, 0.8);
+             color: #222;
+        }
+        90%{
+            color: #222;
         }
         95%{
             width: 90%; box-shadow: 0px 0px 19px 12px rgba(233, 213, 77, 0.8),inset 0px 0px 19px 12px rgba(233, 213, 77, 0.8);
@@ -315,9 +329,16 @@
         ul{
             padding-inline-start: 0;
             padding: 0 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
         }
             li{
                 position: relative;
+                width: 100%;
                 cursor: default;
                 &::after{
                     content: '';
@@ -399,7 +420,7 @@
         text-align: center;
         border-radius: 15px;
         background-color: #111;
-        box-shadow: 2px 2px 17px 10px rgba(0,0,0,0.96);
+        box-shadow: 2px 2px 17px 10px rgba(0,0,0,0.76);
         color: #f0f0f0;
         margin:50px 0;
 
@@ -414,6 +435,5 @@
 
     #secondSection {
         background-color: #FFFF00;
-
     }
 </style>

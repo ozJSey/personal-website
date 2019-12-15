@@ -23,7 +23,6 @@
         <li><a href="#">About me</a></li>
         <li><a href="#">Skills?</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="#">CV</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </div>
@@ -85,7 +84,7 @@
            this.$refs.banner.style.borderTopLeftRadius = "0%";
            this.$refs.menu.style.borderTopRightRadius = "0%";
            this.$refs.menu.style.transform = "perspective(400px) rotateY(0)";
-            this.$refs.banner.style.transform = "perspective(200px) rotateX(0deg)";
+          this.$refs.banner.style.transform = "perspective(200px) rotateX(0deg)";
            childArray.forEach(el => {
              el.style.transform = "rotateZ(0) translate3d(0,0,0)";
              el.style.width = "50px";
@@ -96,11 +95,10 @@
         }
       }
     },
-     beforeMount(){
+    beforeMount(){
     setInterval(() => {
       this.$refs.hello.style.filter = "hue-rotate(" + this.letsGo +'deg)';
     }, 2000);
-    
   },
   mounted(){
     setInterval(() => {
@@ -137,7 +135,7 @@
     }
     .desc {
       font-family: 'Permanent Marker', cursive;
-      width: 0px;
+      width: 0;
       font-size: 26px;
       background-color: #dacb4b;
       box-shadow: 0px 0px 1px 4px rgba(233, 213, 77, .2);

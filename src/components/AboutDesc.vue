@@ -2,10 +2,9 @@
   <section ref="sideSection" @click="enlarge" class="some-text animated">
       <h1>Özgür Seyidoğlu</h1>
       <p>Hello, I am a Front-End developer from Turkey. I also develop mobile apps for fun/professional reasons.</p>
-      <p>I have been into development from freelance to professional and now international enviroments</p>
-      <p>I code pretty much day and night! </p>
-      <p>My preffered way to call myself is "Production-ready front-end developer who does mobile sometimes"</p>
-      <p>With all these being said, I want to finish with a side note. I have no idea if I can share my code.I don't want to be sued :( Can totally share privately if asked.</p>
+      <p>I have been into development from freelance to professional and now international enviroments.</p>
+      <p>I code pretty much day and night! On daytime I work in Dr. Serkan Aygin and Doku Medical Center as Mobile &amp; Front-End Developer <br> In the nighttime I work on freelance or personal/self-improvement projects.</p>
+      <p>My preffered way to call myself is "Production-ready front-end developer who does mobile sometimes".</p>
       <div :class="{opacity: extended}" class="side-title">
          <p> More information!</p>
       </div>
@@ -88,8 +87,8 @@ export default {
         }
         .side-title{
             position: absolute;
-            right: -145px;
-            top: 117px;
+            right: -140px;
+            top: 97px;
             cursor: pointer;
             transition: opacity .4s ease-out;
             opacity: 1;

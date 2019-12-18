@@ -10,13 +10,15 @@
         <span></span>
     </div>
     <div ref="banner" class="glitch-wrapper">
-      <div class="glitch" data-text="OZGUR ÖS eyidoglu">OZGUR <span class="js"> JS</span>eyidoglu 
+      <div class="glitch" data-text="OZGUR ÖSeyidoglu">OZGUR <span class="js"> JS</span><span class="rest"> eyidoglu </span>
        <div class="bottom-text">
       <p class="desc">Website <span> Artistry </span></p>
       <p class="trans-desc">Welcome to my website!</p>
       </div>
     </div>
-    
+    <div class="deep-line">
+      <p>Internet is the new media!</p>
+    </div>
     </div>
     <div ref="menu" class="menu">
       <ul>
@@ -80,7 +82,7 @@
           }, 300);
         }
         else{
-           this.$refs.menu.style.top = "-150px";
+           this.$refs.menu.style.top = "-50%";
            this.$refs.banner.style.borderTopLeftRadius = "0%";
            this.$refs.menu.style.borderTopRightRadius = "0%";
            this.$refs.menu.style.transform = "perspective(400px) rotateY(0)";
@@ -110,6 +112,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@mixin mobile{
+  @media (max-width: 992px) { @content; }
+} 
+  .deep-line{
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+  }
   .bottom-text {
     position: absolute;
     bottom: -250px;
@@ -117,20 +127,36 @@
     left: 0;
     transform: translateY(-50%);
     padding: 10px;
-    color: #111;
-
+    color: #060607;
+    @include mobile{
+      left: 50%;
+      top: 90%;
+      transform: translateX(-50%);
+    }
     .trans-desc{
       position: absolute;
       top:20px;
       width: 100%;
       white-space: nowrap;
-      color: white;
+      color: #fff;
       font-size: 26px;
       left: 30px;
       animation: reverse-fill .7s 2s 1 ease-in forwards;
+      @include mobile{
+        top: 5px;
+        width: 20%;
+        left: 21px;
+        word-break: inherit;
+        white-space: unset;
+      }
       &::first-letter {
         font-size: 35px;
-        color: white;
+        color: #fff;
+
+        @include mobile{
+          font-size: 22px;
+          color: #fff;
+        }
       }
     }
     .desc {
@@ -142,10 +168,19 @@
       animation: fill 1s 3s 1 ease-in forwards;
       padding: 10px 20px;
       border-radius: 7px;
+      color: #121314;
+      @include mobile{
+        font-size: 15px;
+        padding: 10px 20px 10px 0;
+      }
 
       &::first-letter {
         font-size: 35px;
-        color: white;
+        color: #fff;
+         @include mobile{
+          font-size: 22px;
+          color: #fff;
+        }
       }
 
       span {
@@ -161,15 +196,25 @@
     transition: all ease-in-out .8s;
     background-color: #e9d54d;
     z-index: -1;
-    color: white;
+    color: #fff;
     top: -190px;
     width: 50%;
     box-shadow: 0 0 2px 0px rgba(158, 143, 41, .1);
+    @include mobile{
+    left: 50px;
+    top: -50%;
+    min-height: 40%;
+    z-index: 99;
+    width: 100%;
+    }
     ul{
       width: 100%;
       list-style: none !important;
       padding-left:20px;
       display: flex;
+      @include mobile{
+        flex-direction: column;
+      }
       li{
         margin: 10px 20px;
         font-size: 24px;
@@ -177,7 +222,7 @@
         a{
           position: relative;
           letter-spacing: .03rem;
-          color: #222;
+          color: #060607;
           text-decoration: none;
        
         &:after{
@@ -188,7 +233,7 @@
           height:3px;
           bottom: -3px;
           transition: width .4s ease-out;
-          background-color: #222;
+          background-color: #121314;
         }
         &:hover{
            &:after{
@@ -202,7 +247,7 @@
 
   @keyframes fill {
     to {
-      color: white;
+      color: #f2fdff;
       width: 100%;
     }
   }
@@ -238,6 +283,11 @@
     left: 50px;
     display: flex;
     z-index: 3;
+
+    @include mobile{
+      top: 15px;
+      left: 10px;
+    }
 
     .hamburger-btn {
       outline: none;
@@ -278,11 +328,23 @@
   .js {
     background-color: rgb(233, 213, 77);
     padding: 0 15px;
-    color: #222;
+    color: #060607;
     font-weight: 600;
     border-radius: 5px;
     font-size: 90px;
     box-shadow: 0px 0px 1px 4px rgba(233, 213, 77, .2);
+
+    @include mobile{
+      font-size: 34px;
+      padding: 0 5px;
+    }
+  }
+  .rest{
+    margin-left: -50px;
+
+    @include mobile{
+      margin-left:-15px;
+    }
   }
 
   .hello {
@@ -295,7 +357,7 @@
     height: 100%;
     display: flex;
     transition: all .7s ease-out;
-     background: #111;
+     background: #121314;
     justify-content: center;
     z-index: 1;
     align-items: center;
@@ -303,11 +365,18 @@
   }
 
   .glitch {
-    color: white;
+    color: #fff;
     font-size: 90px;
     text-transform: upercase;
     position: relative;
     display: inline-block;
+
+    @include mobile{
+      font-size: 34px;
+      text-align: center;
+      width: 100%;
+      padding: 0 5px;
+    }
   }
 
   .glitch::before,
@@ -318,7 +387,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: #111;
+    background: #121314;
   }
 
   .glitch::before {

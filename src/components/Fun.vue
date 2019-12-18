@@ -10,7 +10,7 @@
             <span></span>
             <span></span>
             <p>It's funny</p>
-            <p>to see</p>
+            <p>To see</p>
             <p>People Rate</p>
             <p>Themselves...</p>
         </div>
@@ -48,11 +48,16 @@ export default {
 </script>
 
 <style lang="scss">
-    
+    @mixin mobile{
+        @media (max-width: 992px) { @content; }
+    }
     #rate{
         margin-top: 100px;
             position: relative;
          background-color: #00FFFF;
+         @include mobile{
+             margin-top: 50px;
+         }
         >div{
             img{
                 max-width: 100%;
@@ -103,6 +108,7 @@ export default {
                     left:0;
                     z-index: 1;
                     border-radius: 0;
+                    
                     &.animate:nth-of-type(1){
                         top: 25%;
                         height: 50px;
@@ -141,6 +147,9 @@ export default {
                     right:0;
                     z-index: 1;
                     border-radius: 0;
+                    @include mobile{
+                        font-size: 25px;
+                    }
                     &.animate:nth-of-type(1){
                         top: 22%;
                         height: 50px;

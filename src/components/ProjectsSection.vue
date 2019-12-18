@@ -1,10 +1,10 @@
 <template>
 <div class="projects-wrapper">
   <div class="row">
-      <div class="col-3">
+      <div class="col-12 col-lg-3 image-center">
         <img src="../assets/ctech-logo.png" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p>- I was assigned in Kryptos team, to support web based projects being carried on. The project itself is an impressive encryption/decryption tool works in the places bluetooth USB has signal in, it's a information security software coded with C# and has mobile applications also. I didn't contribute to this project, but I was exposed to it naturally.</p>
         <ul>
             <li>Projects during the time here.</li>
@@ -19,10 +19,10 @@
             </ul>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-lg-3 image-center">
         <img src="../assets/chooseclick-logo.png" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p>- Ali Evren Goksungur, PhD. A masters degree lecturer in our school and Nisantasi University wanted to see me in his team, when I felt ready, I started here as a Front-End developer. This is the first time I was focused on Front-End development. As he is a great back-end developer himself, I knew I wouldn't achieve much, and I was loving front-end more.</p>
         <ul>
              <li>Projects during the time here.</li>
@@ -34,10 +34,10 @@
             </ul>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-lg-3 image-center">
         <img src="../assets/admatic-logo.png" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p> This is the biggest online advertisement company in our country makes higher revenue country-wide (Turkey) than Google Advertisements. I had an NDA here even if I haven't I resigned here after a month which I wont get into much details here.</p>
         <ul> - I was a JS developer
              <li>Projects during the time here.</li>
@@ -49,16 +49,16 @@
             </ul>
         </ul>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-lg-3 image-center">
         <img src="../assets/portalgrup-logo.png" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p> Portalgrup, one of the Turkey's highest quality digital agencies has super high tier customers that I can't enclose online, there I learned best practices of what I use today in HTML/CSS/JS/Jquery. I don't own any codebase from there nor I could take it, in 5 months of experience I worked for 2 websites from start, 3 bugfix and/or additional features to those websites. I often solved peer-problems as much as I got support from them, it was a really cooperative company that I can share the websites I worked on privately as links. </p>
       </div>
-      <div class="col-3">
+      <div class="col-12 col-lg-3 image-center">
         <img src="../assets/drsa-logo.svg" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p> I work here as solo Front-End &amp; Mobile Software Development Engineer </p>
         <ul> - There was a website modal with HTML/CSS ready when I got there. <a href="https://www.https://drserkanaygin.com/">Dr. Serkan Aygin </a>
          <li>Projects during the time here.</li>
@@ -103,10 +103,10 @@
           
         </ul>
       </div>
-       <div class="col-3">
+       <div class="col-12 col-lg-3 image-center">
         <img src="../assets/for-logo.png" alt="" class="img-fluid">
       </div>
-      <div class="col-9">
+      <div class="col-12 col-lg-9">
         <p> While working at Dr.SerkanAygin&amp;Dokutip , I also work for this software house "For Advertisement and Software Development House" as a contract Front-End Engineer per project. </p>
         <ul>
             -The projects Mr. Ayhan was kind enough to give me :
@@ -118,8 +118,9 @@
             <li> <a href="http://www.businessweek.com.tr/">Bloomberg Businessweek</a> HTML/CSS fix added JS &amp; Desktop to tablet to mobile responsiveness. (Only desktop was ready with a lot of errors). </li>
         </ul>
       </div>
+      <div class="col-12">
       <p><a href="http://korkmazlaryapi.net/"> Korkmazlaryapi </a>I also prepared this website for free to one of the relatives, I was restricted with the font-family and keeping all information. Rest was me being me (: It was a full-stack project PHP-CSS-JS-JQuery</p>
-      
+      </div>
   </div>
   <p>Done a cat-api flip-off Meow Or Not. <br></p>
       <p>Done plenty of presentations on many aspects of Software as I studied SE.</p>
@@ -137,16 +138,37 @@ export default {
 </script>
 
 <style lang="scss">
+@mixin mobile{
+    @media (max-width: 992px){
+        @content;
+    }
+}
+#projects{
+    @include mobile{
+        padding: 0 5px;
+    }
+}
 .projects-wrapper{
-    background-color: #111;
-   
-    color: #ededed;
+    color: #d8d7ed;
     padding: 20px;
+    @include mobile{
+        padding:20px 0;
+    }
+    .image-center{
+        text-align: center;
+    }
+    ul{
+        @include mobile{
+            margin-block-start: 5px;
+            padding-inline-start: 20px;
+        }
+    }
     a{
         color: #00ff00 !important;
         position: relative;
         text-decoration: none;
         margin: 0 8px 0 0;
+        white-space: nowrap;
         &::after{
             content:'';
             position: absolute;
@@ -158,6 +180,12 @@ export default {
             height: 70%;
             transition: all .4s;
             animation: blink 1.2s linear infinite;
+
+            @include mobile{
+                top: 0px;
+                height: 20px;
+                right: -2px;
+            }
         }
         &::before{
             content: '';
@@ -186,6 +214,10 @@ export default {
         background-color: #fff;
         box-shadow: 1px 1px 3px 1px rgba(255,255,255,0.76);
         border-radius: 20px;
+        @include mobile{
+            width: 100%;
+            height: 135px;
+        }
     }
 }
 @keyframes blink {

@@ -101,23 +101,30 @@
 </script>
 
 <style lang="scss">
+@mixin mobile{
+  @media (max-width: 992px) { @content; }
+} 
     #projects {
         font-family: 'Arima Madurai', cursive;
         background-color: #00ff00;
         padding: 20px 0 60px;
         margin-top: 100px;
+        @include mobile{
+            margin-top: 50px;
+            padding: 20px 10px 60px;
+        }
         *{
             transition: all .6s ease-out;
         }
         >div {
             margin-top: 50px;
             transition: all .4s;
-            background-color: #111;
+            background-color: #121314;
             box-shadow: 2px 2px 17px 10px rgba(0,0,0,0.76);
             border-radius: 15px;
             .project-bg {
                 margin: 50px 0 0 0;
-                color: #dedede;
+                color: #d8d7ed;
                 text-align: center;
 
                 p {
@@ -143,6 +150,12 @@
                 border-top-width: 3px;
                 box-shadow:inset 0 0 15px 20px rgb(203, 255, 182),inset 0 0 10px rgb(166, 255, 166), 0 0 15px 1px rgb(172, 255, 65),inset 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
                 animation: linearGra 8s cubic-bezier(0.075, 0.82, 0.165, 1) 1s infinite normal forwards;
+
+                @include mobile{
+                    font-size: 15px;
+                    width: 80%;
+                    margin-left: 10%;
+                }
             }
             button:nth-of-type(2){
                 margin-top: 40px;
@@ -156,7 +169,7 @@
 color: transparent;
         }
         2%{
-color: white;
+color: #d8d7ed;
         }
         3%{
 color: greenyellow;

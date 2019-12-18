@@ -8,7 +8,7 @@
                         <p>Front-End &amp; Mobile Developer</p>
                     </div>
                     <div class="row tech-stack">
-                        <div class="col-3" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{ active: hover1 }">
+                        <div class="col-6 col-lg-3" @mouseover="hover1 = true" @mouseleave="hover1 = false" :class="{ active: hover1 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons html" :icon="[ 'fab', 'html5' ]" />
                             </div>
@@ -35,7 +35,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3" @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{ active: hover2 }">
+                        <div class="col-6 col-lg-3" @mouseover="hover2 = true" @mouseleave="hover2 = false" :class="{ active: hover2 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons css" :icon="[ 'fab', 'css3' ]" />
                             </div>
@@ -62,7 +62,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3" @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{ active: hover3 }">
+                        <div class="col-6 col-lg-3" @mouseover="hover3 = true" @mouseleave="hover3 = false" :class="{ active: hover3 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons js" :icon="[ 'fab', 'js' ]" />
                             </div>
@@ -90,7 +90,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-3" @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{ active: hover4 }">
+                        <div class="col-6 col-lg-3" @mouseover="hover4 = true" @mouseleave="hover4 = false" :class="{ active: hover4 }">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons vue" :icon="[ 'fab', 'vuejs' ]" />
                             </div>
@@ -117,7 +117,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="spinner-card">
                                 <font-awesome-icon class="icons gulp" :icon="[ 'fab', 'gulp' ]" />
                             </div>
@@ -129,7 +129,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="spinner-card">
                                 <div class="icons-not-fa">
                                     <svg width="50%" height="50%" viewBox="0 0 256 256"
@@ -141,7 +141,7 @@
                             
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="spinner-card">
                                 <div class="icons-not-fa">
                                     <svg height="40%" viewBox=".29 .22 77.26 95.75" width="40%"
@@ -160,7 +160,7 @@
                             </div>
                             
                         </div>
-                        <div class="col-3">
+                        <div class="col-6 col-lg-3">
                             <div class="spinner-card">
                                 <div class="icons-not-fa">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="70%" height="21%"
@@ -219,22 +219,32 @@
 </script>
 
 <style lang="scss">
+@mixin mobile{
+    @media (max-width: 992px) {
+        @content;
+    }
+}
     .tech-stack {
         padding: 60px 30px;
+        @include mobile{
+            padding: 30px 0px;
+        }
         >div{
             position: relative;
             border-right-width:7px;
             border-left-width :2px;
             border-top-width: 0;
             border-bottom-width: 0;
-            border-color: white;
+            border-color: #d8d7ed;
             border-style: solid;
             display: flex;
             justify-content: center;
             align-items: center;
             width: 100%;
             padding: 15px 0;
-
+@include mobile{
+                    border-left-width: 0;
+                }
             &:first-child{
                 border-left: 0px;
                 border-top: 0px;
@@ -271,7 +281,6 @@
             &:nth-child(2n){
                 border-bottom: 0px;
                 border-right: 0px;
-                
             }
         }
     }
@@ -295,10 +304,10 @@
         }
         15%{
             width: 90%; box-shadow: 0px 0px 19px 12px rgba(233, 213, 77, 0.8),inset 0px 0px 19px 12px rgba(233, 213, 77, 0.8);
-             color: #222;
+             color: #121314;
         }
         90%{
-            color: #222;
+            color: #060607;
         }
         95%{
             width: 90%; box-shadow: 0px 0px 19px 12px rgba(233, 213, 77, 0.8),inset 0px 0px 19px 12px rgba(233, 213, 77, 0.8);
@@ -350,7 +359,7 @@
                     width: 6px;
                     height: 6px;
                     border-radius: 6px;
-                    background-color: white;
+                    background-color: #d8d7ed;
                 }
                 &:hover{
                     &::after{
@@ -364,7 +373,9 @@
     .icons {
 
         font-size: 150px;
-
+        @include mobile{
+            text-align: center;
+        }
         &.gulp {
             color: #E34B4F;
         }
@@ -410,18 +421,24 @@
         background-repeat: no-repeat;
         margin: 0;
         padding: 0;
-
+        @include mobile{
+            padding: 0 10px;
+        }
         .about-me {
             margin-top: 100px;
+
+            @include mobile{
+                margin-top: 50px;
+            }
         }
     }
 
     .me-card {
         text-align: center;
         border-radius: 15px;
-        background-color: #111;
+        background-color: #121314;
         box-shadow: 2px 2px 17px 10px rgba(0,0,0,0.76);
-        color: #f0f0f0;
+        color: #d8d7ed;
         margin:50px 0;
 
 
@@ -430,6 +447,12 @@
             font-size: 36px;
             line-height: .92;
             font-weight: 700;
+
+            @include mobile{
+                font-size: 24px;
+                word-break: break-word;
+                margin-bottom: .4rem;
+            }
         }
     }
 

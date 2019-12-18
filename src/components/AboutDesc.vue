@@ -44,6 +44,11 @@ export default {
 </script>
 
 <style lang="scss">
+@mixin mobile{
+    @media (max-width: 992px){
+        @content;
+    }
+}
     .some-text{
         position: absolute;
         top: 50px;
@@ -52,28 +57,30 @@ export default {
         transition: right .4s ease-in;
         right: 95vw;
         cursor: pointer;
-        background-color: #111;
+        background-color: #121314;
         background-image: linear-gradient(
         to right,
         transparent 33%,
         rgba(255,255,255,0.3) 50%,
-        transparent 66%
-  );
-  background-size:300% 100%;
-  animation: shine 1s 2;
+        transparent 66%);
+        background-size:300% 100%;
+        animation: shine 1s 2;
         box-shadow: 2px 2px 17px 10px rgba(0, 0, 0, 0.96);
         &.animated{
             animation: shakeItUpBebegim 4s normal 0s infinite ease-in;
             border-radius: 15px;
         }
         
-        color: #f0f0f0;
+        color: #d8d7ed;
         h1,p{
             text-align: center;
         }
         p{  
             opacity: 0;
             padding:0 70px;
+            @include mobile{
+                padding:0 20px;
+            }
         }
         h1{
             opacity: 0;

@@ -8,8 +8,9 @@
                 <div @click="reverseSendForm" class="col-12 contactForm">
                     <h2> Özgür Seyidoglu </h2>
                     <input type="text" id="email" @click="copy" value="ozgur.seyidoglu.sw@gmail.com">
+                     <p style="text-align:center">Thank you for visiting my website!</p>
                     <a target="_blank" href="https://www.linkedin.com/in/ozgur-seyidoglu-024449168/"> <font-awesome-icon class="animateIcon" :icon="[ 'fab', 'linkedin' ]"> </font-awesome-icon></a>
-                    <p style="text-align:center">Thank you for visiting my website!</p>
+                   
                 </div>
                  <div id="subText">
                         Copied!

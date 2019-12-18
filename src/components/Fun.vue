@@ -147,6 +147,7 @@ export default {
                     right:0;
                     z-index: 1;
                     border-radius: 0;
+                    
                     @include mobile{
                         font-size: 25px;
                     }
@@ -197,7 +198,7 @@ export default {
             width: 100%;
             background-color: transparent;
             opacity: 1;
-            color: #1b1a51;
+            color: #222;
         }
         50%{
             width: 90%;
@@ -205,6 +206,7 @@ export default {
         }
         60%{
             width: 90%;
+            text-shadow: 1px 1px 2px #121314;
         }
         80%{
             opacity: 1;

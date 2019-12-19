@@ -242,7 +242,7 @@
             align-items: center;
             width: 100%;
             padding: 15px 0;
-@include mobile{
+            @include mobile{
                     border-left-width: 0;
                 }
             &:first-child{
@@ -254,25 +254,12 @@
                 border-left: 0px;
                 border-top: 0px;
             }
-            &.active:nth-child(-n+4){
-                &:nth-child(n)::after{
-                    animation: panel 1.5s linear .3s 1 normal forwards;
-                }
-                .spinner-card{
-                    animation: spinner .4s ease-in 1.4s 1 normal forwards;
-                }
-                .backcard{
-                    animation: spinner .4s ease-in 1.8s 1 reverse forwards;
-                }
-            }
              &:nth-child(n)::after{
                 content: 'Keep Hovering (:';
                 position: absolute;
                 color: transparent;
-                right: 20px;
-                left: 50%;
+                left: 15px;
                 line-height: 2;
-                transform: translateX(-50%);
                 width: 0;
                 transition: width .4s ease-in;
                 height: 30px;
@@ -282,14 +269,31 @@
                 border-bottom: 0px;
                 border-right: 0px;
             }
+            &.active:nth-child(-n+4){
+                &:nth-child(n)::after{
+                    animation: panel 1.5s linear .3s 1 normal forwards;
+                }
+                .spinner-card{
+                    animation: spinner .4s ease-in 1.4s 1 normal forwards;
+                }
+                .backcard{
+                    animation: spinner .2s ease-out 1.8s 1 reverse forwards;
+                }
+            }
         }
     }
     @keyframes spinner {
         from{
             transform: perspective(1000px) rotateY(0);
+            height: 100%;
+            width: 100%;
+            opacity: 1;
         }
         to{
             transform: perspective(1000px) rotateY(90deg);
+            height:0;
+            width: 0;
+            opacity: 0;
         }
     }
     @keyframes panel {
@@ -335,6 +339,7 @@
             width: 100%;
             height: 100%;
             transform: perspective(100px) rotateY(90deg);
+            
         ul{
             padding-inline-start: 0;
             padding: 0 30px;
@@ -344,6 +349,8 @@
             height: 100%;
             width: 100%;
             flex-direction: column;
+            z-index: 1;
+            
         }
             li{
                 position: relative;
@@ -363,7 +370,7 @@
                 }
                 &:hover{
                     &::after{
-                    right: calc(100% + 6px);
+                    right: calc(95% + 6px);
                     box-shadow: 0 -1px 2px 2px white;
                     width: 25px;
                     }

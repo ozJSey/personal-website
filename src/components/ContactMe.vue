@@ -104,6 +104,10 @@ export default {
                 border-width: 0;
                 animation: float 6s ease-in-out alternate infinite;
                 background-size: 300% 300%;
+                &:active{
+                    outline: 0;
+                    box-shadow: 0;
+                }
                 &::after{
                     content: 'Say Hi!';
                     position: absolute;

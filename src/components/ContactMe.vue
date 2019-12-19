@@ -159,14 +159,15 @@ export default {
                 transition: all 1s ease;
                 svg{
                     color: transparent;
-                    font-size: 35px;transition: all 1s ease-in;     
+                    font-size: 35px;
+                    transition: all 1s ease-in;     
                 }
                 &.animate{
                     animation: text .5s cubic-bezier(0.075, 0.82, 0.165, 1) 2s 1 normal forwards;
-
                     svg{
                     color: #fdecff;
-                    font-size: 35px;        
+                    font-size: 35px;
+                    z-index: 3;     
                     }
                 }
             }
@@ -175,7 +176,11 @@ export default {
                 background-color: transparent;
                 transition: all 1s ease;
                 width: 100%;
-                cursor: pointer;
+                cursor:crosshair;
+                pointer-events:all;
+                &::selection{
+                    background-color: transparent;
+                }
                 margin-bottom: 10px;
                 text-align: center; 
                 padding: 10px;
@@ -191,10 +196,10 @@ export default {
         }
         #subText{
             position: absolute;
-            bottom: 10%;
+            bottom: 20%;
             opacity: 0;
             left: 50%;
-            z-index: 0;
+            z-index: 5;
             transform: translateX(-50%);
             background-color: rgba(0,0,0,0.85);
             color: #d8d7ed;

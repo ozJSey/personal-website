@@ -24,9 +24,36 @@ export default {
     ContactMe
   },
 }
-window.addEventListener('onmousemove', (e) =>{
-      console.log(e);
-    });
+const
+scrollTo = function(to, duration) {
+    const
+    element = document.scrollingElement || document.documentElement,
+    start = element.scrollTop,
+    change = to - start,
+    startDate = +new Date(),
+    // t = current time
+    // b = start value
+    // c = change in value
+    // d = duration
+    easeInOutQuad = function(t, b, c, d) {
+        t /= d/2;
+        if (t < 1) return c/2*t*t + b;
+        t--;
+        return -c/2 * (t*(t-2) - 1) + b;
+    },
+    animateScroll = function() {
+        const currentDate = +new Date();
+        const currentTime = currentDate - startDate;
+        element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+        if(currentTime < duration) {
+            requestAnimationFrame(animateScroll);
+        }
+        else {
+            element.scrollTop = to;
+        }
+    };
+    animateScroll();
+};
 </script>
 
 <style lang="scss">
@@ -71,7 +98,8 @@ window.addEventListener('onmousemove', (e) =>{
       #0000FF 84%,
       #0000FF 96%,
       #0000FF 96%,
-  );
+  ); 
+    scroll-behavior: smooth;
     background-size: 40%;
     background-position: 7%;
     background-repeat: no-repeat;

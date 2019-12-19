@@ -22,10 +22,10 @@
     </div>
     <div ref="menu" class="menu">
       <ul>
-        <li><a href="#">About me</a></li>
-        <li><a href="#">Skills?</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" v-scroll-to="'#secondSection'">About me</a></li>
+        <li><a href="#" v-scroll-to="'#rate'">Skills?</a></li>
+        <li><a href="#" v-scroll-to="'#projects'">CV</a></li>
+        <li><a href="#" v-scroll-to="'#contactMe'">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -108,6 +108,7 @@
     }, 2000);
   }
   }
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -117,7 +118,7 @@
 } 
   .deep-line{
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     color: #fff;
   }
   .bottom-text {
@@ -171,7 +172,7 @@
       color: #000;
       @include mobile{
         font-size: 15px;
-        padding: 10px 20px 10px 0;
+        padding: 10px 10px 10px 0;
       }
 
       &::first-letter {

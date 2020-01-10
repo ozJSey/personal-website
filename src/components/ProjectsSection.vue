@@ -115,7 +115,6 @@
             <li> Current Boyner Advertisement Model run on social media, mostly Instagram.</li>
             <li> Emaar Shopping Mall Slot Machine advertisement model.</li>
             <li> Atlas Air advertisement model mentioned before which is also an Admatic Project. Sold to Pegasus though, pictures will change (:</li>
-            <li> <a href="http://www.businessweek.com.tr/">Bloomberg Businessweek</a> HTML/CSS fix added JS &amp; Desktop to tablet to mobile responsiveness. (Only desktop was ready with a lot of errors). </li>
         </ul>
       </div>
       <div class="col-12">

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import store from './store'
 import './assets/icons'
+import 'bootstrap-4-grid';
 var VueScrollTo = require('vue-scrollto');
  
 Vue.config.productionTip = false
